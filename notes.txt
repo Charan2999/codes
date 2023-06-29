@@ -1,0 +1,29 @@
+/* eslint-disable no-undef */
+/* eslint-disable no-unused-vars */
+function area(n) {
+  let areaOfOuterSquare;
+  let areaOfCircle;
+  let areaOfInnerSquare;
+
+  areaOfOuterSquare = (n*n)
+  areaOfCircle = ((3.14*n*n)/4)
+  areaOfInnerSquare=((n*n)/2)
+  // Your code goes here.
+  // As described in question there is a square with sides "n"(passed as argument to this function), containing a circle which is again containing another square.
+  // You have to find out area of these three Geometries for given "n".
+  // This function returns an array of areas of the three geometries in descending order of area.
+
+  let areaArray = [areaOfOuterSquare, areaOfCircle, areaOfInnerSquare];
+  // The first element of the array is the area of the outer square, the second element is the area of the circle and the third element is the area of the inner square.
+  return areaArray;
+}
+
+/**
+ * Do not change the code below.
+ */
+const value = 7;
+const areas = area(value) || ['', '', ''];
+document.getElementById(
+  'program'
+).innerHTML = `<p>Area of three Geometries where n= ${value}</p><p>Area of Outer Square : ${areas[0]}</p><p>Area of Circle : ${areas[1]}</p><p>Area of Inner Square : ${areas[2]}</p>`;
+module.exports = area;
