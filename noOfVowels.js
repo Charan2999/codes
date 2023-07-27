@@ -9,4 +9,4 @@ const NoOfVowels = (str) => {
   }
   return vowelsCount;
 };
-console.log(NoOfVowels("aeiou"));
+console.log(NoOfVowels("CHaran"));
