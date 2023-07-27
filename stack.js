@@ -36,7 +36,7 @@ class Stack {
     } else {
       popNode = this.first;
       this.first = popNode.next;
-    // popNode.next = null
+      // popNode.next = null
     }
     this.size--;
     return popNode;
@@ -60,13 +60,12 @@ list.push(1);
 list.push(11);
 list.push(12);
 
-console.log(list.pop())
+// console.log(list.pop());
 // console.log(list.pop())
 // console.log(list.pop())
 // console.log(list.pop())
 // console.log(list.pop())
-
 
 console.log(list.print());
 
-console.log(list);
+// console.log(list);

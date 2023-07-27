@@ -39,4 +39,25 @@
 // // }
 // // console.log(selectionSort2([4, 8, 5, 6, 1, 2, 7, 3]));
 
-const selectionSort = () => {};
+/**
+ * reverse of bubble sort
+ * min will be selected for placing at first
+ */
+const selectionSort = (arr) => {
+  for (let i = 0; i < arr.length - 1; i++) {
+    let min = i;
+    console.log(arr);
+    for (let j = i + 1; j < arr.length; j++) {
+      if (arr[j] < arr[min]) {
+        min = j;
+      }
+    }
+    if (min !== i) {
+      let temp = arr[i];
+      arr[i] = arr[min];
+      arr[min] = temp;
+    }
+  }
+  return arr;
+};
+console.log(selectionSort([7, 4, 10, 8, 3, 1]));

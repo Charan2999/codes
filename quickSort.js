@@ -27,7 +27,7 @@
 function pivotFunction(arr, start = 0, end = arr.length - 1) {
   let pivot = arr[end];
   while (start < end) {
-    while (arr[start] < pivot) {
+    while (arr[start] <= pivot) {
       start++;
     }
     while (arr[end] > pivot) {
@@ -51,6 +51,6 @@ function quickSort(arr, left = 0, right = arr.length - 1) {
     quickSort(arr, left, pivotIndex - 1);
     quickSort(arr, pivotIndex + 1, right);
   }
-  return arr
+  return arr;
 }
 console.log(quickSort([4, 8, 5, 6, 1, 2, 7, 3]));
